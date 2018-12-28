@@ -1,0 +1,6 @@
+    DROP SEQUENCE "US_SUSER"
+                  *
+ERROR at line 1:
+ORA-02289: sequence does not exist 
+
+

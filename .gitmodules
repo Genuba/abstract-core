@@ -1,0 +1,3 @@
+[submodule "02_Implementation/02_WEB/ada-architecture-core"]
+	path = 02_Implementation/02_WEB/ada-architecture-core
+	url = https://github.com/TheOverLordKotan/ada-architecture-core.git

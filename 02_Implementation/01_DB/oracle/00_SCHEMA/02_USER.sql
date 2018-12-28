@@ -1,0 +1,26 @@
+REM ******************************************************************
+REM Fecha         : 08/05/2018
+REM Realizado por : Master Zen
+REM Base de Datos : FS_AUWEB_US
+REM ******************************************************************
+
+REM USUARIO DEL APLICATIVO AUWEB_US
+
+drop user "FS_AUWEB_US" cascade;
+
+Create user FS_AUWEB_US
+ Identified by FS_AUWEB_US
+ Default tablespace TS_AUWEB
+ Temporary tablespace TS_TAUWEB    
+ account unlock;
+
+
+Grant RESOURCE, 
+  ALTER USER, CREATE CLUSTER, CREATE DATABASE LINK, CREATE PROFILE , ALTER PROFILE, 
+  CREATE PROCEDURE, CREATE PUBLIC DATABASE LINK, 
+  CREATE PUBLIC SYNONYM, CREATE ROLE, CREATE SEQUENCE, 
+  CREATE SESSION, CREATE SYNONYM, CREATE TABLE, 
+  CREATE TRIGGER, CREATE USER , CREATE VIEW, CREATE TYPE,
+  DROP PUBLIC SYNONYM, EXECUTE ANY PROCEDURE, 
+  SELECT ANY SEQUENCE, SELECT ANY TABLE, 
+  UNLIMITED TABLESPACE to FS_AUWEB_US;

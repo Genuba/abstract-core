@@ -1,0 +1,35 @@
+REM ******************************************************************
+REM Fecha         : 08/05/2018
+REM Realizado por : Master Zen
+REM Base de Datos : FS_AUWEB_US
+REM ******************************************************************
+
+
+CREATE INDEX "IXFK_MO_TROMO_MO_TMODU"   
+ ON  "FS_AUWEB_US"."MO_TROMO" ("ROMO_MODU")
+TABLESPACE	TS_IAUWEB 
+PCTFREE	10 
+INITRANS	2 
+MAXTRANS	255 
+STORAGE ( 
+	INITIAL	65536
+	MINEXTENTS 1
+	MAXEXTENTS 2147483645
+	BUFFER_POOL DEFAULT 
+	)
+;
+  
+  
+CREATE INDEX "IXFK_MO_TROMO_US_TROLL"
+ ON  "FS_AUWEB_US"."MO_TROMO" ("ROMO_ROLL") 
+TABLESPACE	TS_IAUWEB 
+PCTFREE	10 
+INITRANS	2 
+MAXTRANS	255 
+STORAGE ( 
+	INITIAL	65536
+	MINEXTENTS 1
+	MAXEXTENTS 2147483645
+	BUFFER_POOL DEFAULT 
+	)
+;
