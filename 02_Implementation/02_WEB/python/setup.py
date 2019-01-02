@@ -11,5 +11,8 @@ setup(
     license='GNU',
 
     # Package info
-    install_requires=['requests']
+    install_requires=['requests',
+                      'flask',
+                      'flask_wtf'
+                    ]
 )

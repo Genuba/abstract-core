@@ -2,9 +2,9 @@ Metadata-Version: 1.0
 Name: authentication-web
 Version: 1.0
 Summary: Python part
-Home-page: https://gitlab.com/Master-Zen/authentication-web.git
+Home-page: https://github.com/Master-Zen/abstract-core
 Author: Master-Zen
 Author-email: daapiva@gmail.com
-License: MIT
+License: GNU
 Description: UNKNOWN
 Platform: UNKNOWN
