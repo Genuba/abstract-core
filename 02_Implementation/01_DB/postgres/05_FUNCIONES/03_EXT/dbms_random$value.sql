@@ -1,6 +1,6 @@
--- FUNCTION: ow_base_ext."dbms_random$value"(double precision, double precision)
+-- FUNCTION: ada_db_ext."dbms_random$value"(double precision, double precision)
 
-CREATE OR REPLACE FUNCTION ow_base_ext."dbms_random$value"(
+CREATE OR REPLACE FUNCTION ada_db_ext."dbms_random$value"(
 	p_start double precision DEFAULT 0,
 	p_high double precision DEFAULT 1)
     RETURNS double precision
@@ -18,8 +18,8 @@ END;
 
 $BODY$;
 
-ALTER FUNCTION ow_base_ext."dbms_random$value"(double precision, double precision)
-    OWNER TO ow_base_us;
+ALTER FUNCTION ada_db_ext."dbms_random$value"(double precision, double precision)
+    OWNER TO ada_db_us;
 
-COMMENT ON FUNCTION ow_base_ext."dbms_random$value"(double precision, double precision)
-    IS 'The first version of this function gets a random number greater than or equal to 0 and less than 1. The other version gets a random number "x", where "x" is greater than or equal to a specified lower limit and less than a specified higher limit.';
+COMMENT ON FUNCTION ada_db_ext."dbms_random$value"(double precision, double precision)
+    IS 'The first version of this function gets a random number greater than or equal to 0 and less than 1. The other version gets a random number "x", where "x" is greater than or equal to a specified ladaer limit and less than a specified higher limit.';

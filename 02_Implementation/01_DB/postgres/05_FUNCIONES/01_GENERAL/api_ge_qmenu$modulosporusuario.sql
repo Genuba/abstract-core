@@ -1,12 +1,12 @@
--- FUNCTION: ow_base_us."api_ge_qmenu$modulosporusuario"(ow_base_us.type_tt_ge_lgtr, text)
+-- FUNCTION: ada_db_us."api_ge_qmenu$modulosporusuario"(ada_db_us.type_tt_ge_lgtr, text)
 
-CREATE OR REPLACE FUNCTION ow_base_us."api_ge_qmenu$modulosporusuario"(
-	p_ctrl_operacion ow_base_us.type_tt_ge_lgtr,
+CREATE OR REPLACE FUNCTION ada_db_us."api_ge_qmenu$modulosporusuario"(
+	p_ctrl_operacion ada_db_us.type_tt_ge_lgtr,
 	p_usuario text,
-	OUT p_tmodulo ow_base_us.type_tt_ge_modulo,
+	OUT p_tmodulo ada_db_us.type_tt_ge_modulo,
 	OUT p_cod_rta text,
-	OUT p_errores ow_base_us.type_tt_ge_erro,
-	OUT p_mensajes ow_base_us.type_tt_ge_mnsje)
+	OUT p_errores ada_db_us.type_tt_ge_erro,
+	OUT p_mensajes ada_db_us.type_tt_ge_mnsje)
     RETURNS record
     LANGUAGE 'plpgsql'
 
@@ -18,27 +18,27 @@ AS $BODY$
 
 DECLARE
 
-    v_crta_crta_gral OW_BASE_US.GE_TCRTA.crta_crta%TYPE
+    v_crta_crta_gral ADA_DB_US.GE_TCRTA.crta_crta%TYPE
 
     /* Codigo interno de respuesta */;
 
-    v_crta_prcs_gral OW_BASE_US.GE_TCRTA.crta_prcs%TYPE
+    v_crta_prcs_gral ADA_DB_US.GE_TCRTA.crta_prcs%TYPE
 
     /* Proceso al cual pertenece el codigo de respuesta */;
 
-    v_crta_http_gral OW_BASE_US.GE_TCRTA.crta_http_code%TYPE
+    v_crta_http_gral ADA_DB_US.GE_TCRTA.crta_http_code%TYPE
 
     /* Codigo Http para el cogido interno de respuesta */;
 
-    v_crta_descri_gral OW_BASE_US.GE_TCRTA.crta_descri%TYPE
+    v_crta_descri_gral ADA_DB_US.GE_TCRTA.crta_descri%TYPE
 
     /* Descripcion general del codigo de respuesta */;
 
-    v_lgtr OW_BASE_US.GE_TLGTR.lgtr_lgtr%TYPE
+    v_lgtr ADA_DB_US.GE_TLGTR.lgtr_lgtr%TYPE
 
     /* Log de trasnsacciones */;
 
-    v_lgtr_id_entidad OW_BASE_US.GE_TLGTR.lgtr_id_entidad%TYPE
+    v_lgtr_id_entidad ADA_DB_US.GE_TLGTR.lgtr_id_entidad%TYPE
 
     /* Id Entidad para el log de transacciones */;
 
@@ -60,9 +60,9 @@ BEGIN
 
     DECLARE
 
-        v_cod_rspta_lgtr_v OW_BASE_US.GE_TCRTA.crta_crta%TYPE;
+        v_cod_rspta_lgtr_v ADA_DB_US.GE_TCRTA.crta_crta%TYPE;
 
-        v_cod_rpta_descri_lgtr_v OW_BASE_US.GE_TCRTA.crta_descri%TYPE;
+        v_cod_rpta_descri_lgtr_v ADA_DB_US.GE_TCRTA.crta_descri%TYPE;
 
     BEGIN
 
@@ -70,7 +70,7 @@ BEGIN
 
             *
 
-            FROM ow_base_us.ge_qlgtr$validar_ctrl_operacion(p_ctrl_operacion, v_crta_prcs_gral)
+            FROM ada_db_us.ge_qlgtr$validar_ctrl_operacion(p_ctrl_operacion, v_crta_prcs_gral)
 
             INTO F$RESULT_REC;
 
@@ -106,9 +106,9 @@ BEGIN
 
     DECLARE
 
-        v_cod_rspta_lgtr OW_BASE_US.GE_TCDER.cder_cder%TYPE;
+        v_cod_rspta_lgtr ADA_DB_US.GE_TCDER.cder_cder%TYPE;
 
-        v_cod_rpta_descri_lgtr OW_BASE_US.GE_TCDER.cder_descri%TYPE;
+        v_cod_rpta_descri_lgtr ADA_DB_US.GE_TCDER.cder_descri%TYPE;
 
     /* */
 
@@ -118,7 +118,7 @@ BEGIN
 
             *
 
-            FROM ow_base_us.ge_qlgtr$iniciar_log(p_ctrl_operacion := p_ctrl_operacion, p_prcs := v_crta_prcs_gral)
+            FROM ada_db_us.ge_qlgtr$iniciar_log(p_ctrl_operacion := p_ctrl_operacion, p_prcs := v_crta_prcs_gral)
 
             INTO v_cod_rspta_lgtr, v_cod_rpta_descri_lgtr, v_lgtr;
 
@@ -132,7 +132,7 @@ BEGIN
 
         *
 
-        FROM ow_base_us.ge_qmenu$modulosporusuario(v_crta_prcs_gral, p_usuario)
+        FROM ada_db_us.ge_qmenu$modulosporusuario(v_crta_prcs_gral, p_usuario)
 
         INTO F$RESULT_REC_2;
 
@@ -156,9 +156,9 @@ BEGIN
 
     DECLARE
 
-        v_cod_rspta_lgtr OW_BASE_US.GE_TCDER.cder_cder%TYPE;
+        v_cod_rspta_lgtr ADA_DB_US.GE_TCDER.cder_cder%TYPE;
 
-        v_cod_rpta_descri_lgtr OW_BASE_US.GE_TCDER.cder_descri%TYPE;
+        v_cod_rpta_descri_lgtr ADA_DB_US.GE_TCDER.cder_descri%TYPE;
 
     BEGIN
 
@@ -176,7 +176,7 @@ BEGIN
 
             *
 
-            FROM ow_base_us.ge_qlgtr$finalizar_log(p_lgtr := v_lgtr, p_crta := v_crta_crta_gral, p_id_entidad := COALESCE(v_lgtr_id_entidad, '-'), p_error := v_crta_descri_gral)
+            FROM ada_db_us.ge_qlgtr$finalizar_log(p_lgtr := v_lgtr, p_crta := v_crta_crta_gral, p_id_entidad := COALESCE(v_lgtr_id_entidad, '-'), p_error := v_crta_descri_gral)
 
             INTO v_cod_rspta_lgtr, v_cod_rpta_descri_lgtr;
 
@@ -206,9 +206,9 @@ BEGIN
 
                     DECLARE
 
-                        v_cod_rspta_crta OW_BASE_US.GE_TCDER.cder_cder%TYPE;
+                        v_cod_rspta_crta ADA_DB_US.GE_TCDER.cder_cder%TYPE;
 
-                        v_cod_rpta_descri_crta OW_BASE_US.GE_TCDER.cder_descri%TYPE;
+                        v_cod_rpta_descri_crta ADA_DB_US.GE_TCDER.cder_descri%TYPE;
 
                     BEGIN
 
@@ -216,7 +216,7 @@ BEGIN
 
                             *
 
-                            FROM ow_base_us.ge_qcrta$consultar_crta(v_crta_prcs_gral, v_crta_crta_gral)
+                            FROM ada_db_us.ge_qcrta$consultar_crta(v_crta_prcs_gral, v_crta_crta_gral)
 
                             INTO v_crta_http_gral, v_crta_descri_gral, v_cod_rspta_crta, v_cod_rpta_descri_crta;
 
@@ -234,5 +234,5 @@ END;
 
 $BODY$;
 
-ALTER FUNCTION ow_base_us."api_ge_qmenu$modulosporusuario"(ow_base_us.type_tt_ge_lgtr, text)
-    OWNER TO ow_base_us;
+ALTER FUNCTION ada_db_us."api_ge_qmenu$modulosporusuario"(ada_db_us.type_tt_ge_lgtr, text)
+    OWNER TO ada_db_us;

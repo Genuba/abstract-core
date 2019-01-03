@@ -1,2 +1,2 @@
--- ------------ Write DROP-DATABASE-stage scripts -----------
+-- ------------ Write DROP-DATADB-stage scripts -----------
 

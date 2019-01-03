@@ -1,6 +1,6 @@
--- SEQUENCE: ow_base_us.aut_spersn
+-- SEQUENCE: ada_db_us.aut_spersn
 
-CREATE SEQUENCE ow_base_us.aut_spersn;
+CREATE SEQUENCE ada_db_us.aut_spersn;
 
-ALTER SEQUENCE ow_base_us.aut_spersn
-    OWNER TO ow_base_us;
+ALTER SEQUENCE ada_db_us.aut_spersn
+    OWNER TO ada_db_us;

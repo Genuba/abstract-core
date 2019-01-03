@@ -1,5 +1,5 @@
 /* ---------------------------------------------------- */
-/*  SU GARANTIA PERSONAL - OWNK                         */
+/*  SU GARANTIA PERSONAL - ADA                         */
 /* ---------------------------------------------------- */
 
 \i 02_TABLAS/02_AUTENTICACION/AUT_TUSUARIO.sql

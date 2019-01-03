@@ -1,6 +1,6 @@
--- Table: ow_base_us.aut_tsurl
+-- Table: ada_db_us.aut_tsurl
 
-CREATE TABLE ow_base_us.aut_tsurl
+CREATE TABLE ada_db_us.aut_tsurl
 (
     surl_url character varying(512) COLLATE pg_catalog."default" NOT NULL,
     surl_servicio double precision NOT NULL,
@@ -12,23 +12,23 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE ow_base_us.aut_tsurl
-    OWNER to ow_base_us;
-COMMENT ON TABLE ow_base_us.aut_tsurl
+ALTER TABLE ada_db_us.aut_tsurl
+    OWNER to ada_db_us;
+COMMENT ON TABLE ada_db_us.aut_tsurl
     IS 'TABLA QUE ALMACENA LAS RUTAS ĂšNICAS DE LOCALIZACIĂ“N (URL) DE LAS PĂ�GINAS PERTENECIENTES AL CN_SGR ASĂŤ COMO SU RELACIĂ“N CON EL SERVICIO AL QUE PERTENECE Y SI ES UN ARCHIVO DE TIPO PRIMARIO O SECUNDARIO';
 
-COMMENT ON COLUMN ow_base_us.aut_tsurl.surl_url
+COMMENT ON COLUMN ada_db_us.aut_tsurl.surl_url
     IS 'ID Y URL DEL SERVICIO O ARCHIVO QUE SE ESTA UBICANDO';
 
-COMMENT ON COLUMN ow_base_us.aut_tsurl.surl_servicio
+COMMENT ON COLUMN ada_db_us.aut_tsurl.surl_servicio
     IS 'SERVICIO QUE SE PRESTA Y ES UBICADO EN UN ARCHIVO EN LA URL RELACIONADA';
 
-COMMENT ON COLUMN ow_base_us.aut_tsurl.surl_tipo
+COMMENT ON COLUMN ada_db_us.aut_tsurl.surl_tipo
     IS 'TIPO DE URL P-PRINCIPAL, S-SECUNDARIA';
     
     --
--- Name: aut_tsurl pk_aut_tsurl; Type: CONSTRAINT; Schema: ow_base_us; Owner: ow_base_us
+-- Name: aut_tsurl pk_aut_tsurl; Type: CONSTRAINT; Schema: ada_db_us; Owner: ada_db_us
 --
 
-ALTER TABLE ONLY ow_base_us.aut_tsurl
+ALTER TABLE ONLY ada_db_us.aut_tsurl
     ADD CONSTRAINT pk_aut_tsurl PRIMARY KEY (surl_url, surl_servicio);

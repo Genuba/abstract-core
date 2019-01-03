@@ -1,42 +1,42 @@
 -- ******************************************************************
--- Fecha         : 11/04/2018
--- Realizado por : Ownk
+-- Fecha         : 01/02/2019
+-- Realizado por : Ada
 -- Base de Datos : &PROYECTO
 -- ******************************************************************
 
 --
--- PostgreSQL database dump
+-- PostgreSQL datadb dump
 --
 
--- Database: OW_BASE
+-- Datadb: ADA_DB
 
-CREATE DATABASE "OW_BASE"
-    WITH 
-    OWNER = ow_base_us
+CREATE DATADB "ADA_DB"
+    WITH
+    OWNER = ada_db_us
     ENCODING = 'UTF8'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
 -- Cambio de usuario
-\c OW_BASE 
+\c ADA_DB
 
 --
--- Name: ow_base_ext; Type: SCHEMA; Schema: -; Owner: ow_base_us
+-- Name: ada_db_ext; Type: SCHEMA; Schema: -; Owner: ada_db_us
 --
 
-CREATE SCHEMA ow_base_ext;
+CREATE SCHEMA ada_db_ext;
 
 
-ALTER SCHEMA ow_base_ext OWNER TO ow_base_us;
+ALTER SCHEMA ada_db_ext OWNER TO ada_db_us;
 
 
 --
--- Name: ow_base_us; Type: SCHEMA; Schema: -; Owner: ow_base_us
+-- Name: ada_db_us; Type: SCHEMA; Schema: -; Owner: ada_db_us
 --
 
-CREATE SCHEMA ow_base_us;
+CREATE SCHEMA ada_db_us;
 
 
-ALTER SCHEMA ow_base_us OWNER TO ow_base_us;
+ALTER SCHEMA ada_db_us OWNER TO ada_db_us;
 
 ;

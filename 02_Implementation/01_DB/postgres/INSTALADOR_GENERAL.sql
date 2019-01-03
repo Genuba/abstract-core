@@ -1,5 +1,5 @@
 -- INSTRUCCIONES
--- REEMPLAZAR EL TEXTO _OW_BASE_ CON EL NOMBRE DEL PROYECTO
+-- REEMPLAZAR EL TEXTO _ADA_DB_ CON EL NOMBRE DEL PROYECTO
 
 -- ********************  NOTA IMPORTANTE!!!!  ***********************
 -- *                                                                *
@@ -7,7 +7,7 @@
 -- *  PARA EFECTOS DE VERIFICACION DEL CAMBIO                       *
 -- *                                                                *
 -- *                                                                *
--- *                     OWNK S.A.S.                                *
+-- *                     ADA Inc                                *
 -- *                                                                *
 -- *                                                                *
 -- ******************************************************************
@@ -27,15 +27,15 @@
 \i INSTALL_OBJECTS.sql
 
 
--- Si la ejecución del script no presenta ningún problema por favor haga 
--- COMMIT, de lo contrario haga ROLLBACK y comuniquese con OWNK S.A.S.
+-- Si la ejecución del script no presenta ningún problema por favor haga
+-- COMMIT, de lo contrario haga ROLLBACK y comuniquese con ADA Inc
 --
 -- ********************  NOTA IMPORTANTE!!!!  ***********************
 -- *                                                                *
 -- *  POR FAVOR ENVIAR EL LOG DE EJECUCION DE ESTE SCRIPT (*.LST)   *
 -- *  PARA EFECTOS DE VERIFICACION DEL CAMBIO                       *
--- *  AL CORREO proyectos@OWNK.CO                                   *
+-- *  AL CORREO proyectos@ADA.CO                                   *
 -- *                                                                *
--- *                        OWNK S.A.S                              *
+-- *                        ADA S.A.S                              *
 -- *                                                                *
 -- ******************************************************************

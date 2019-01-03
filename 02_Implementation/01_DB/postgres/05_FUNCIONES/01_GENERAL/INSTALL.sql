@@ -1,7 +1,7 @@
 \i 05_FUNCIONES/01_GENERAL/add_days.sql
 \i 05_FUNCIONES/01_GENERAL/dias.sql
 \i 05_FUNCIONES/01_GENERAL/nextvalue.sql
-\i 05_FUNCIONES/01_GENERAL/now.sql
+\i 05_FUNCIONES/01_GENERAL/nada.sql
 \i 05_FUNCIONES/01_GENERAL/tokencod.sql
 \i 05_FUNCIONES/01_GENERAL/api_ge_qmenu$modulosporusuario.sql
 \i 05_FUNCIONES/01_GENERAL/api_ge_qmenu$obtenermenuporusuario.sql

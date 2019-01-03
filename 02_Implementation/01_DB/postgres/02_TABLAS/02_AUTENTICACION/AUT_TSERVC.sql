@@ -1,6 +1,6 @@
--- Table: ow_base_us.aut_tservc
+-- Table: ada_db_us.aut_tservc
 
-CREATE TABLE ow_base_us.aut_tservc
+CREATE TABLE ada_db_us.aut_tservc
 (
     servicio_servicio double precision NOT NULL,
     servicio_modulo character varying(20) COLLATE pg_catalog."default" NOT NULL,
@@ -15,32 +15,32 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE ow_base_us.aut_tservc
-    OWNER to ow_base_us;
-COMMENT ON TABLE ow_base_us.aut_tservc
+ALTER TABLE ada_db_us.aut_tservc
+    OWNER to ada_db_us;
+COMMENT ON TABLE ada_db_us.aut_tservc
     IS 'TABLA QUE ALMACENA LOS SERVICIOS PRESTADOS DENTRO DEL CN_SGR, ASĂŤ COMO LOS MODULOS A LOS QUE PERTENECEN';
 
-COMMENT ON COLUMN ow_base_us.aut_tservc.servicio_servicio
+COMMENT ON COLUMN ada_db_us.aut_tservc.servicio_servicio
     IS 'ID DEL SERVICIO PRESTADO EN EL SISTEMA';
 
-COMMENT ON COLUMN ow_base_us.aut_tservc.servicio_modulo
+COMMENT ON COLUMN ada_db_us.aut_tservc.servicio_modulo
     IS 'ID DEL MODULO AL QUE PERTENECE EL SERVICI? RELACIONADO';
 
-COMMENT ON COLUMN ow_base_us.aut_tservc.servicio_descri
+COMMENT ON COLUMN ada_db_us.aut_tservc.servicio_descri
     IS 'DESCRIPCI?N DEL SERVICIO RELACIONADO';
 
-COMMENT ON COLUMN ow_base_us.aut_tservc.servicio_nomb
+COMMENT ON COLUMN ada_db_us.aut_tservc.servicio_nomb
     IS 'NOMBRE DEL SERVICIO RELACIONADO';
 
-COMMENT ON COLUMN ow_base_us.aut_tservc.servicio_tipo
+COMMENT ON COLUMN ada_db_us.aut_tservc.servicio_tipo
     IS 'TIPO SERVICIO. L=LISTADO, O=OPERATIVO';
 
-COMMENT ON COLUMN ow_base_us.aut_tservc.servicio_orden
+COMMENT ON COLUMN ada_db_us.aut_tservc.servicio_orden
     IS 'ORDEN DEL SERVICIO DENTRO DEL MODULO';
     
     --
--- Name: aut_tservc pk_aut_tservc; Type: CONSTRAINT; Schema: ow_base_us; Owner: ow_base_us
+-- Name: aut_tservc pk_aut_tservc; Type: CONSTRAINT; Schema: ada_db_us; Owner: ada_db_us
 --
 
-ALTER TABLE ONLY ow_base_us.aut_tservc
+ALTER TABLE ONLY ada_db_us.aut_tservc
     ADD CONSTRAINT pk_aut_tservc PRIMARY KEY (servicio_servicio);

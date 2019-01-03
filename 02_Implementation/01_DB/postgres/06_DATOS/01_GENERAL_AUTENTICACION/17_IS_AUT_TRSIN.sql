@@ -1,2 +1,0 @@
--- INSERTING into ow_base_us.AUT_TRSIN
-INSERT INTO ow_base_us.AUT_TRSIN (RSIN_ROL,RSIN_SERVICIO) values ('ADMIN','50');

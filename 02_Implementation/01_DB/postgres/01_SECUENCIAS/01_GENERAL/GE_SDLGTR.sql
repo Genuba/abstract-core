@@ -1,6 +1,6 @@
--- SEQUENCE: ow_base_us.ge_sdlgtr
+-- SEQUENCE: ada_db_us.ge_sdlgtr
 
-CREATE SEQUENCE ow_base_us.ge_sdlgtr;
+CREATE SEQUENCE ada_db_us.ge_sdlgtr;
 
-ALTER SEQUENCE ow_base_us.ge_sdlgtr
-    OWNER TO ow_base_us;
+ALTER SEQUENCE ada_db_us.ge_sdlgtr
+    OWNER TO ada_db_us;
